@@ -1,9 +1,11 @@
 import random
-'''Obtenir la proposition du joueur
-Params: entier correspondant à la proposition
-Return:"ciseaux", "feuille" ou "pierre"
-'''
+
+
 def propositionJoueur(i):
+    '''Obtenir la proposition du joueur
+    Params: entier correspondant à la proposition
+    Return:"ciseaux", "feuille" ou "pierre"
+    '''     
     print(i)
     tab=["ciseaux", "feuille", "pierre"]
     if i >=0 and i <len(tab) :
@@ -11,21 +13,23 @@ def propositionJoueur(i):
     else :
         return None
 
-'''Obtenir la proposition de la machine
-Params: -
-Return:"ciseaux", "feuille" ou "pierre"
-'''
+
 def propositionMachine():
+    '''Obtenir la proposition de la machine
+    Params: -
+    Return:"ciseaux", "feuille" ou "pierre"
+    '''
     tab=["ciseaux", "feuille", "pierre"]
     nb=random.randint(0,2)
     return(tab[nb])
 
-'''Connaître le gagnant
-Params: chaîne correspondant à la proposition du jouer
-        chaîne correspondant à la proposition de la machine
-Return:-1 en cas d'égalité, 0 si le joueur gagne, 1 si la machine gagne
-'''
+
 def shifumi(p1, p2):
+    '''Connaître le gagnant
+    Params: chaîne correspondant à la proposition du jouer
+        chaîne correspondant à la proposition de la machine
+    Return:-1 en cas d'égalité, 0 si le joueur gagne, 1 si la machine gagne
+    '''
     rep=1
     if p1 not in ["ciseaux", "feuille", "pierre"]:
         rep=None
