@@ -2,6 +2,9 @@ from tkinter import *
 from f import *
 
 #callback
+'''fonction de callback
+indiquant qui a gagné
+'''
 def ok():
     p1=propositionJoueur(l.curselection()[0])
     p2=propositionMachine()
